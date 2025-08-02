@@ -9,7 +9,7 @@ static char randomName[100];
 
 // Example tmpnam output: /tmp/fileXyz123 → returns: Xyz123
 char* makeRandomName(void) {
-    char fullpath[L_tmpnam];
+    char fullpath[L_tmpnam]; //L_tmpnam is macro used to define the length of random string. You can see in cd usr/include/stdio.h
     tmpnam(fullpath);  // Generate temporary file path
 
     // Find the "file" prefix and extract the suffix (e.g., "Xyz123")
